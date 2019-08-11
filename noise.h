@@ -1,7 +1,7 @@
 #ifndef FASTNOISE_NOISE_H
 #define FASTNOISE_NOISE_H
 
-#include <reference.h>
+#include "core/reference.h"
 #include "lib/FastNoise.h"
 
 typedef fastnoise::FastNoise _FastNoise;
