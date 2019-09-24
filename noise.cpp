@@ -30,6 +30,11 @@
 
 #include "noise.h"
 
+const String FastNoise::BINDING_STRING_TYPE = "Value,Value Fractal,Perlin,Perlin Fractal,Simplex,Simplex Fractal,Cellular,White Noise,Cubic,Cubic Fractal";
+const String FastNoise::BINDING_STRING_INTERPOLATION = "Linear,Quintic,Hermite";
+const String FastNoise::BINDING_STRING_FRACTAL_TYPE = "FBM,Billow,Rigid Multi";
+const String FastNoise::BINDING_STRING_CELLULAR_DISTANCE_FUNCTION = "Euclidean,Manhattan,Naural";
+const String FastNoise::BINDING_STRING_CELLULAR_RETURN_TYPE = "Cell Value,Noise lookup,Distance,Distance 2,Distance 2 Add,Distance 2 Sub,Distance 2 Mul,Distance 2 Div";
 
 FastNoise::FastNoise() : Reference() {
     

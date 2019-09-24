@@ -4,12 +4,19 @@
 #include "core/reference.h"
 #include "lib/FastNoise.h"
 
+#include "core/ustring.h"
+
 typedef fastnoise::FastNoise _FastNoise;
 
 class FastNoise : public Reference {
 	GDCLASS(FastNoise, Reference)
 
 public:
+	static const String BINDING_STRING_TYPE;
+	static const String BINDING_STRING_INTERPOLATION;
+	static const String BINDING_STRING_FRACTAL_TYPE;
+	static const String BINDING_STRING_CELLULAR_DISTANCE_FUNCTION;
+	static const String BINDING_STRING_CELLULAR_RETURN_TYPE;
 
     // Enums Godot-style (same values)
 
