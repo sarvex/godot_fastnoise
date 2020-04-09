@@ -34,6 +34,16 @@
 #include <algorithm>
 #include <random>
 
+#include "core/version.h"
+
+#if VERSION_MAJOR >= 4
+
+#pragma GCC diagnostic push 
+#pragma GCC diagnostic ignored "-Wstrict-aliasing"
+#pragma GCC diagnostic ignored "-Wunused-function"
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#endif
+
 namespace fastnoise {
 
 const FN_DECIMAL GRAD_X[] =
@@ -2258,3 +2268,10 @@ void FastNoise::SingleGradientPerturb(unsigned char offset, FN_DECIMAL warpAmp, 
 }
 
 } // namespace fastnoise
+
+
+
+#if VERSION_MAJOR >= 4
+
+#pragma GCC diagnostic pop
+#endif

@@ -6,6 +6,14 @@
 
 #include "core/ustring.h"
 
+#include "core/version.h"
+
+#if VERSION_MAJOR < 4
+#include "core/pool_vector.h"
+#else
+typedef PackedInt64Array PoolIntArray;
+#endif
+
 typedef fastnoise::FastNoise _FastNoise;
 
 class FastNoise : public Reference {
