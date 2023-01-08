@@ -8,19 +8,15 @@
 #include "core/object/class_db.h"
 #endif
 
-#include "noise.h"
 #include "fastnoise_noise_params.h"
+#include "noise.h"
 
-
-void register_fastnoise_types() {
-
-	ClassDB::register_class<FastNoise>();
-	ClassDB::register_class<FastnoiseNoiseParams>();
+void initialize_fastnoise_module(ModuleInitializationLevel p_level) {
+	if (p_level == MODULE_INITIALIZATION_LEVEL_SCENE) {
+		GDREGISTER_CLASS(FastNoise);
+		GDREGISTER_CLASS(FastnoiseNoiseParams);
+	}
 }
 
-
-void unregister_fastnoise_types() {
-
+void uninitialize_fastnoise_module(ModuleInitializationLevel p_level) {
 }
-
-
