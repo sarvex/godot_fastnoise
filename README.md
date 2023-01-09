@@ -14,6 +14,8 @@ This branch tries to follow godot's master branch (as much as I have time).
 
 For different godot versions look at the other branches.
 
+Status for this branch: Update for 4.0 is work in progress.
+
 ## Install
 
 You have to get the source code of Godot to compile it with the module. Copy the contents of the repository inside a `fastnoise`  directory under Godot's `modules` folder. The name is important for the module to compile properly.
