@@ -4,7 +4,7 @@
 #include "core/version.h"
 
 #if VERSION_MAJOR > 3
-#include "core/object/reference.h"
+#include "core/object/ref_counted.h"
 #include "core/string/ustring.h"
 #else
 #include "core/reference.h"
@@ -23,8 +23,8 @@ typedef PackedInt64Array PoolIntArray;
 
 typedef fastnoise::FastNoise _FastNoise;
 
-class FastNoise : public Reference {
-	GDCLASS(FastNoise, Reference)
+class FastNoise : public RefCounted {
+	GDCLASS(FastNoise, RefCounted)
 
 public:
 	static const String BINDING_STRING_TYPE;
